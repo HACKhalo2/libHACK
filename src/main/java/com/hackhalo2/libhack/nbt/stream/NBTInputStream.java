@@ -16,6 +16,10 @@ public class NBTInputStream extends DataInputStream {
 		super(new BufferedInputStream(handle.read()));
 	}
 	
+	public NBTInputStream(BufferedInputStream in) {
+		super(in);
+	}
+	
 	public ITag readNBTTag() throws NBTException, IOException {
 		final byte type = this.readByte();
 		
